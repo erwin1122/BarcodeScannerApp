@@ -2,55 +2,65 @@
   <ion-page>
     <ion-header :translucent="true">
       <ion-toolbar>
-        <ion-title>Blank</ion-title>
+        <ion-title class="ion-text-center">Barcode Scanner</ion-title>
       </ion-toolbar>
     </ion-header>
 
     <ion-content :fullscreen="true">
-      <ion-header collapse="condense">
-        <ion-toolbar>
-          <ion-title size="large">Blank</ion-title>
-        </ion-toolbar>
-      </ion-header>
-
       <div id="container">
-        <strong>Ready to create an app?</strong>
-        <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+        <h2 class="ion-text-center">Recent Scans</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Value</th>
+              <th>Type</th>
+              <th>Format</th>
+              <th>Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- Hier können Sie Ihre Scan-Daten einfügen. Jeder Datensatz sollte als neuer <tr> eingefügt werden -->
+          </tbody>
+        </table>
+      </div>
+      <div id="bottom">
+        <ion-button expand="full">Scan</ion-button>
       </div>
     </ion-content>
   </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/vue';
+import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 </script>
 
 <style scoped>
 #container {
-  text-align: center;
-  
+  padding: 15px;
+}
+
+#container h2 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+#container table {
+  /* Hier können Sie Ihr Tabelle-Styling hinzufügen */
+  width: 100%;
+  border: 1px solid #ddd;
+  border-collapse: collapse;
+}
+
+#container table th, #container table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+#bottom {
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-  
-  color: #8c8c8c;
-  
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
 }
 </style>
