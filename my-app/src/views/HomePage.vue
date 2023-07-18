@@ -1,6 +1,6 @@
 <template>
   <ion-page>
-    <ion-header :translucent="true">
+    <ion-header>
       <ion-toolbar>
         <ion-title class="ion-text-center">Barcode Scanner</ion-title>
       </ion-toolbar>
@@ -33,6 +33,8 @@
 <script setup lang="ts">
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton } from '@ionic/vue';
 </script>
+
+
 
 <style scoped>
 #container {
