@@ -24,7 +24,7 @@
         </table>
       </div>
       <div id="bottom">
-        <ion-button expand="full" onclick="scan()">Scan</ion-button>
+        <ion-button expand="full">Scan</ion-button>
       </div>
     </ion-content>
   </ion-page>
